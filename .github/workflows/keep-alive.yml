@@ -1,0 +1,14 @@
+name: Keep-Alive Ping
+
+on:
+  schedule:
+    - cron: "*/10 * * * *"
+  workflow_dispatch:
+
+jobs:
+  ping:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Ping backend
+        run: |
+          curl -sf https://linguo-backend-otpz.onrender.com/health/ || exit 1

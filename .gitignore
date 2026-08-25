@@ -8,6 +8,8 @@ __pycache__/
 .env.production
 *.sqlite3
 media/
+!media/audio/
+!media/audio/**/
 logs/
 dist/
 .idea/

@@ -197,16 +197,24 @@ class Command(BaseCommand):
             candidate = User.objects.filter(telegram_link_code=code).first()
             ctx["pending"].pop(chat_id, None)
             if candidate:
-                candidate.telegram_chat_id = str(chat_id)
-                candidate.telegram_link_code = ""
-                candidate.save(update_fields=["telegram_chat_id", "telegram_link_code"])
-                quizzes.pop(chat_id, None)
-                send(
-                    chat_id,
-                    f"✅ Akkaunt bog'landi!\n\n"
-                    f"Salom, {candidate.name}! Endi buyruqlar sizniki:\n\n"
-                    + CMD_LIST,
-                )
+                existing = User.objects.filter(telegram_chat_id=str(chat_id)).exclude(id=candidate.id).first()
+                if existing:
+                    send(
+                        chat_id,
+                        f"🔒 Bu Telegram akkaunt allaqachon «{existing.name}» ({existing.email}) akkauntiga ulangan.\n\n"
+                        f"Boshqa akkaunt bilan bog'lash uchun avval shu akkauntdan chiqing.",
+                    )
+                else:
+                    candidate.telegram_chat_id = str(chat_id)
+                    candidate.telegram_link_code = ""
+                    candidate.save(update_fields=["telegram_chat_id", "telegram_link_code"])
+                    quizzes.pop(chat_id, None)
+                    send(
+                        chat_id,
+                        f"✅ Akkaunt bog'landi!\n\n"
+                        f"Salom, {candidate.name}! Endi buyruqlar sizniki:\n\n"
+                        + CMD_LIST,
+                    )
             else:
                 send(chat_id, "⚠️ Kod topilmadi yoki eskirgan. Saytda Profildan yangi havola oling.")
             return

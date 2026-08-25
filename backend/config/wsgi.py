@@ -9,7 +9,6 @@ os.environ.setdefault("DJANGO_SETTINGS_MODULE", "config.settings")
 def _auto_seed():
     try:
         from django.core.management import call_command
-        call_command("migrate", "--run-syncdb", verbosity=0)
         call_command("seed_content", verbosity=0)
     except Exception:
         pass

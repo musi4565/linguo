@@ -4,7 +4,7 @@ services:
     runtime: python
     plan: free
     healthCheckPath: /health/
-    buildCommand: cd backend && pip install -r requirements.txt && python manage.py migrate --no-input && python manage.py seed_content && python manage.py collectstatic --no-input
+    buildCommand: cd backend && pip install -r requirements.txt && python manage.py migrate --no-input && python manage.py seed_content && python manage.py generate_audio --language en && python manage.py generate_audio --language ru && python manage.py generate_audio --language ar && python manage.py generate_audio --language ko && python manage.py generate_audio --language tr && python manage.py collectstatic --no-input
     startCommand: cd backend && gunicorn config.wsgi:application --bind 0.0.0.0:$PORT
     envVars:
       - key: DEBUG

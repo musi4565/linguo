@@ -1,9 +1,12 @@
 import os
 import threading
+import time
+
+os.environ.setdefault("DJANGO_SETTINGS_MODULE", "config.settings")
 
 from django.core.wsgi import get_wsgi_application
 
-os.environ.setdefault("DJANGO_SETTINGS_MODULE", "config.settings")
+application = get_wsgi_application()
 
 
 def _auto_seed():
@@ -16,6 +19,8 @@ def _auto_seed():
 
 
 def _start_bot():
+    import django
+    django.setup()
     try:
         from apps.users.management.commands.runbot import Command
         cmd = Command()
@@ -30,5 +35,3 @@ if os.environ.get("RUN_BOT", "true").lower() == "true":
     t = threading.Thread(target=_start_bot, daemon=True)
     t.start()
     print("[bot] Telegram bot background thread started")
-
-application = get_wsgi_application()

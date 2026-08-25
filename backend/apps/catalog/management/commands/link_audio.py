@@ -21,7 +21,11 @@ class Command(BaseCommand):
             lang_code = section.book.language.code
             filename = f"book{section.book_id}_s{section.order_index}.mp3"
             mp3_path = audio_root / lang_code / filename
-            if mp3_path.exists() and not section.audio:
+            current_exists = False
+            if section.audio:
+                current_file = Path(settings.MEDIA_ROOT) / section.audio.name
+                current_exists = current_file.exists()
+            if mp3_path.exists() and not current_exists:
                 section.audio.name = f"audio/{lang_code}/{filename}"
                 section.save(update_fields=["audio"])
                 linked += 1

@@ -9,9 +9,10 @@ os.environ.setdefault("DJANGO_SETTINGS_MODULE", "config.settings")
 def _auto_seed():
     try:
         from django.core.management import call_command
-        call_command("seed_content", verbosity=0)
-    except Exception:
-        pass
+        call_command("seed_content", verbosity=2)
+        print("[seed] seed_content completed successfully")
+    except Exception as exc:
+        print(f"[seed] ERROR: {exc}")
 
 
 def _start_bot():

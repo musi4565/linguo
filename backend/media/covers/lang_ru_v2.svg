@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="500" viewBox="0 0 800 500">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#c33764"/>
+      <stop offset="100%" stop-color="#f2994a"/>
+    </linearGradient>
+    <linearGradient id="fade" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#000000" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#000000" stop-opacity="0.55"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="500" rx="28" fill="url(#sky)"/>
+  <circle cx="70" cy="55" r="2" fill="#ffffff" opacity="0.18"/><circle cx="150" cy="120" r="2" fill="#ffffff" opacity="0.18"/><circle cx="235" cy="65" r="2" fill="#ffffff" opacity="0.18"/><circle cx="320" cy="115" r="2" fill="#ffffff" opacity="0.18"/><circle cx="410" cy="50" r="2" fill="#ffffff" opacity="0.18"/>
+  <circle cx="545" cy="195" r="108" fill="#ffb347" opacity="0.12"/>
+  <circle cx="545" cy="195" r="54" fill="#ffb347" opacity="0.85"/>
+  
+  <g>
+    <rect x="200" y="382" width="400" height="48" fill="#0d0b1e"/>
+    <rect x="204" y="370" width="14" height="14" fill="#0d0b1e"/><rect x="228" y="370" width="14" height="14" fill="#0d0b1e"/><rect x="252" y="370" width="14" height="14" fill="#0d0b1e"/><rect x="276" y="370" width="14" height="14" fill="#0d0b1e"/><rect x="300" y="370" width="14" height="14" fill="#0d0b1e"/><rect x="324" y="370" width="14" height="14" fill="#0d0b1e"/><rect x="348" y="370" width="14" height="14" fill="#0d0b1e"/><rect x="372" y="370" width="14" height="14" fill="#0d0b1e"/><rect x="396" y="370" width="14" height="14" fill="#0d0b1e"/><rect x="420" y="370" width="14" height="14" fill="#0d0b1e"/><rect x="444" y="370" width="14" height="14" fill="#0d0b1e"/><rect x="468" y="370" width="14" height="14" fill="#0d0b1e"/><rect x="492" y="370" width="14" height="14" fill="#0d0b1e"/><rect x="516" y="370" width="14" height="14" fill="#0d0b1e"/><rect x="540" y="370" width="14" height="14" fill="#0d0b1e"/><rect x="564" y="370" width="14" height="14" fill="#0d0b1e"/><rect x="588" y="370" width="14" height="14" fill="#0d0b1e"/>
+    <rect x="286" y="330" width="38" height="100" fill="#0d0b1e"/>
+    <path d="M 286 332 Q 305 264 324 332 Z" fill="#c0392b"/>
+    <rect x="303" y="238" width="4" height="26" fill="#ffd166"/>
+    <rect x="356" y="256" width="46" height="174" fill="#0d0b1e"/>
+    <polygon points="352,256 406,256 379,192" fill="#0d0b1e"/>
+    <circle cx="379" cy="228" r="5" fill="#ffd166"/>
+    <rect x="442" y="316" width="42" height="114" fill="#0d0b1e"/>
+    <path d="M 442 318 Q 463 244 484 318 Z" fill="#f1c40f"/>
+    <rect x="462" y="216" width="4" height="30" fill="#ffd166"/>
+    <rect x="516" y="348" width="34" height="82" fill="#0d0b1e"/>
+    <path d="M 516 350 Q 533 292 550 350 Z" fill="#2980b9"/>
+  </g>
+  <rect x="0" y="440" width="800" height="60" fill="#070d1f" opacity="0.92"/>
+  <rect x="90" y="452" width="60" height="3" rx="1.5" fill="#ff8fa3" opacity="0.28"/>
+  <rect x="200" y="466" width="84" height="3" rx="1.5" fill="#ffffff" opacity="0.16"/>
+  <rect x="330" y="455" width="50" height="3" rx="1.5" fill="#ffffff" opacity="0.16"/>
+  <rect x="430" y="470" width="96" height="3" rx="1.5" fill="#ff8fa3" opacity="0.28"/>
+  <rect x="560" y="452" width="70" height="3" rx="1.5" fill="#ffffff" opacity="0.16"/>
+  <rect x="660" y="468" width="88" height="3" rx="1.5" fill="#ffffff" opacity="0.16"/>
+  <rect x="730" y="455" width="46" height="3" rx="1.5" fill="#ff8fa3" opacity="0.28"/>
+  <rect x="150" y="484" width="70" height="3" rx="1.5" fill="#ffffff" opacity="0.16"/>
+  <rect x="390" y="488" width="60" height="3" rx="1.5" fill="#ffffff" opacity="0.16"/>
+  <rect x="600" y="486" width="74" height="3" rx="1.5" fill="#ff8fa3" opacity="0.28"/>
+  <rect width="800" height="500" rx="28" fill="url(#fade)"/>
+  <text x="36" y="58" font-family="Segoe UI, Roboto, Arial" font-size="22" fill="#ffffff" opacity="0.8" letter-spacing="5">LINGUO</text>
+  <g transform="translate(648,180)">
+    <circle cx="52" cy="52" r="52" fill="#ffffff" opacity="0.16"/>
+    <text x="52" y="97" font-size="120" text-anchor="middle">🇷🇺</text>
+  </g>
+  <text x="36" y="432" font-family="Segoe UI, Roboto, Arial" font-size="42" font-weight="bold" fill="#ffffff">Rus tili</text>
+</svg>

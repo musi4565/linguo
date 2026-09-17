@@ -7,9 +7,12 @@ __pycache__/
 .env.local
 .env.production
 *.sqlite3
-media/
+media/*
 !media/audio/
-!media/audio/**/
+!media/audio/**
+!media/covers/
+!media/covers/**
+*.log
 logs/
 dist/
 .idea/
